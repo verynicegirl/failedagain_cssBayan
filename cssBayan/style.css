@@ -1,0 +1,134 @@
+body {
+    background-color: #f6f6ec;
+    font-family: 'Golos Text', sans-serif;
+}
+
+h1 {
+    margin-left: 37px;
+}
+
+hr {
+    height: 1px;
+    color: #dde2e5;
+    background-color: #dde2e5;
+    border: none;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 30%;
+    height: 40%;
+    align-self: center;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    color: #1865da;
+}
+
+
+#bayan li {
+    list-style: none;
+    width: 100%;
+}
+
+#bayan li label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bayan li label span {
+    font-size: 28px;
+    margin-right: 15px;
+    color:black;
+}
+
+#bayan label + input[type="radio"]{
+    display: none;
+}
+
+#bayan .container{
+    padding: 0 10px;
+    line-height: 28px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all max-height 0.3s ease-in-out;
+}
+
+#bayan input[type="radio"]:checked + .message{
+    color: black;
+}
+
+#bayan label + input[type="radio"]:checked + .container{
+    max-height: 100%;
+}
+
+#bayan input[type="radio"]:checked + span {
+    display: block;
+}
+
+#bayan input[type="radio"]:checked + .close {
+    display: inline-block;
+    transition: all 0.3s ease-in;
+}
+
+li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+label:checked {
+    color: black;
+}
+
+#bayan input[type="radio"]:checked {
+    color: black;
+}
+
+label:hover{
+    color: black;
+}
+
+#bayan label input[type="radio"]:checked +.container:hover{
+    max-height: 100%;
+
+}
+
+@media all and (max-width: 820px){
+    body{
+        background-color: #CCD5AE;
+        font-family: 'Roboto Mono', monospace;
+    }
+    img {
+        width: 40%;
+        height: 50%;
+    }
+
+}
+
+@media all and (max-width: 500px){
+    body{
+        background-color: #F1DEC9;
+        font-family: 'Tilt Neon', cursive;
+    }
+
+    img {
+        width: 50%;
+        height: 60%;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+}
